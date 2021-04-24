@@ -9,6 +9,7 @@ var divisions =[];
 
 var divisionHeight=300;
 var score =0;
+
 function setup() {
   createCanvas(800, 800);
   engine = Engine.create();
@@ -77,6 +78,8 @@ function draw() {
  
   Engine.update(engine);
   ground.display();
+ 
+
   
 
   if (frameCount%60===0){
@@ -91,6 +94,7 @@ function draw() {
   //display the divisions
   for (var k = 0; k < divisions.length; k++) {
     divisions[k].display();
+   
   }
 
   //display the paricles 
@@ -98,4 +102,5 @@ function draw() {
   for (var k = 0; k < particles.length; k++){
   particles[k].display();
 }
+
 }
